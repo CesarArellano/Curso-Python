@@ -1,2 +1,4 @@
 lista = ["Hola","Soy","Cesar"]
-print(lista[2])
+print(lista[0:3])
+lista.clear()
+print(lista)

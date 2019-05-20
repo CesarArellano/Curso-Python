@@ -5,5 +5,5 @@ autorizado = input("¿Estás autorizado? (Si/No)\n") == "Si"
 
 print("Hola",nombre)
 print("Edad:",edad)
-print("Peso:",peso)
+print("Peso:",peso,"kg")
 print("Autorizado",autorizado)
