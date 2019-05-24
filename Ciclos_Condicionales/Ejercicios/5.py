@@ -10,20 +10,18 @@
 *
 * @date 22/05/2019
 """
+import re, string
+
+def remove_punctuation ( text ):
+    return re.sub('[%s]' % re.escape(string.punctuation), ' ', text)
+
 texto = ""
 temp = 0
 i = 0
 archivo = open("Frankenstein.txt","rt")
 for renglon in archivo:
 	renglon = renglon.rstrip('\n')
-	renglon = renglon.replace(',','')
-	renglon = renglon.replace('.','')
-	renglon = renglon.replace('"','')
-	renglon = renglon.replace('-','')
-	renglon = renglon.replace('?','')
-	renglon = renglon.replace(';','')
-	renglon = renglon.replace(':','')
-	renglon = renglon.replace('!','')
+	renglon = remove_punctuation(renglon)
 	texto += " " + renglon 
 archivo.close()
 
